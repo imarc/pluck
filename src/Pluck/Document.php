@@ -18,35 +18,31 @@ namespace Pluck;
  */
 class Document extends \DOMDocument {
 
-	static protected $in_create;
+	static protected $allow_construct;
+
 	protected $xpath;
 
-	static public function create($html)
+	static public function create($src, $quiet=TRUE)
 	{
-		self::$in_create = TRUE;
-
+		self::$allow_construct = TRUE;
 		$doc = new self();
+		self::$allow_construct = FALSE;
 
-		libxml_use_internal_errors(TRUE);
-		$doc->loadHTML($html);
+		libxml_use_internal_errors($quiet);
+		$doc->loadHTML($src);
 		libxml_clear_errors();
-		
+
 		// register custom node class
-		$doc->registerNodeClass(
-			'DOMElement', '\Selector\Element'
-		);
-
+		$doc->registerNodeClass('DOMElement', '\Pluck\Element');
 		$doc->xpath = new \DOMXpath($doc);
-
-		self::$in_create = FALSE;
 
 		return $doc;
 	}
 
 	public function __construct()
 	{
-		if (self::$in_create == FALSE) {
-			throw new \Exception('Please use ::create instead of the constructor.');
+		if (self::$allowConstruct == FALSE) {
+			throw new \LogicException('Use Pluck\Document::create instead of the constructor.');
 		}
 	}
 
