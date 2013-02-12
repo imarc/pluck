@@ -41,7 +41,7 @@ class Document extends \DOMDocument {
 
 	public function __construct()
 	{
-		if (self::$allowConstruct == FALSE) {
+		if (self::$allow_construct == FALSE) {
 			throw new \LogicException('Use Pluck\Document::create instead of the constructor.');
 		}
 	}
@@ -49,7 +49,7 @@ class Document extends \DOMDocument {
 	public function find($selector, $context=NULL)
 	{
 		return new ElementList(
-			$this->xpath->query(Expression::build($selector))
+			$this->xpath->query(Expression::build($selector), $context)
 		);
 	}
 }
