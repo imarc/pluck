@@ -19,6 +19,12 @@ $dom->find('a.button')->remove();
 
 ```
 
+# To Do
+
+- Finish Documentation
+- Write Tests
+- Add Composer package json
+
 # Credits
 
 - Many of the regexps for CSS to Xpath conversion were authored by T.J. Holowaychuck for his [php-selector](https://github.com/imarc/php-selector) library.
