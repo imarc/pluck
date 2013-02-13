@@ -9,7 +9,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Pluck;
+namespace iMarc\Pluck;
 
 /**
  * @author TJ Holowaychuk <tj@vision-media.ca>
@@ -47,22 +47,32 @@ class Expression {
 		// :last-child
 		$selector = str_replace(':last-child', '*/*[position()=last()]', $selector);
 		// div:nth-child
-		$selector = preg_replace('/([\w\-]+):nth-child\((\d+)\)/', '*/\1[position()=\2]', $selector);
+		$selector = preg_replace('/([\w\-]+):nth-child\((\d+|odd|even)\)/', '*/\1[position()=\2]', $selector);
 		// :nth-child
-		$selector = preg_replace('/:nth-child\((\d+)\)/', '*/*[position()=\1]', $selector);
+		$selector = preg_replace('/:nth-child\((\d+|odd|even)\)/', '*/*[position()=\1]', $selector);
 		// :contains(Foo)
 		$selector = preg_replace('/([\w\-]+):contains\((.*?)\)/', '\1[contains(string(.),"\2")]', $selector);
 		// >
 		$selector = preg_replace('/\s*>\s*/', '/', $selector);
 		// ~
 		$selector = preg_replace('/\s*~\s*/', '/following-sibling::', $selector);
-		// + 
+		// +
 		$selector = preg_replace('/\s*\+\s*([\w\-]+)/', '/following-sibling::\1[position()=1]', $selector);
 		// ' '
 		$selector = preg_replace('/\s+/', '/descendant::', $selector);
 
 		$selector = str_replace(']*', ']', $selector);
 		$selector = str_replace(']/*', ']', $selector);
+
+		//
+		// Below you will find only those translations which need to add spaces.  We hold these off
+		// until the end to ensure spaces are not translated to standard descendent children
+		// selectors
+		//
+
+		//:nth-child(odd|even)
+		$selector = str_replace('[position()=odd]',  '[position() mod 2 = 1 and position() > 1]', $selector);
+		$selector = str_replace('[position()=even]', '[position() mod 2 = 0]', $selector);
 
 		return $selector;
 	}
