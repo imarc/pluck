@@ -14,7 +14,7 @@ $html = <<<EOD
 </html>
 EOD;
 
-$dom = Pluck\Document::create($html);
+$dom = new Pluck\Document($html);
 $dom->find('a.button')->remove();
 
 ```
