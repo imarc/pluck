@@ -1,19 +1,16 @@
 <?php
-/*
- * This file is part of the Pluck package.
- *
- * (c) Copyright 2013 iMarc LLC <info@imarc.net>
- *
- * @license MIT
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+
 namespace iMarc\Pluck;
 
 /**
+ * The Expression class is responsible for CSS to XPath Translations
+ *
+ * @copyright (c) Copyright 2013 iMarc LLC <info@imarc.net>
+ * @license MIT - For full information please view the LICENSE file distributed with this source
+ *
  * @author TJ Holowaychuk <tj@vision-media.ca>
  * @author Jeff Turcotte <jeff@imarc.net>
+ * @author Matthew J. Sahagian [mjs] <matt@imarc.net>
  *
  * @todo write docs
  */
