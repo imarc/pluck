@@ -9,7 +9,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Pluck;
+namespace iMarc\Pluck;
 
 /**
  * @author Jeff Turcotte <jeff@imarc.net>
@@ -18,32 +18,24 @@ namespace Pluck;
  */
 class Document extends \DOMDocument {
 
-	static protected $allow_construct;
-
 	protected $xpath;
 
-	static public function create($src, $quiet=TRUE)
+	public function __construct($src, $quiet = TRUE, $node_class = NULL)
 	{
-		self::$allow_construct = TRUE;
-		$doc = new self();
-		self::$allow_construct = FALSE;
+		parent::__construct();
+
+		$node_class = !isset($node_class)
+			? __NAMESPACE__ . '\Element'
+			: $node_class;
+
+		$this->registerNodeClass('DOMElement', $node_class);
 
 		libxml_use_internal_errors($quiet);
-		$doc->loadHTML($src);
+		$this->loadHTML($src);
 		libxml_clear_errors();
 
 		// register custom node class
-		$doc->registerNodeClass('DOMElement', '\Pluck\Element');
-		$doc->xpath = new \DOMXpath($doc);
-
-		return $doc;
-	}
-
-	public function __construct()
-	{
-		if (self::$allow_construct == FALSE) {
-			throw new \LogicException('Use Pluck\Document::create instead of the constructor.');
-		}
+		$this->xpath = new \DOMXpath($this);
 	}
 
 	public function find($selector, $context=NULL)
