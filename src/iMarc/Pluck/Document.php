@@ -40,8 +40,10 @@ class Document extends DOMDocument
 
 	public function find($selector, $context=NULL)
 	{
-		return new ElementList(
-			$this->xpath->query(Expression::build($selector), $context)
-		);
+		$node_list = $context
+			? $this->xpath->query(Expression::build($selector), $context)
+			: $this->xpath->query(Expression::build($selector));
+
+		return new ElementList($node_list);
 	}
 }

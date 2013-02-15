@@ -76,7 +76,7 @@ class ElementList extends ArrayIterator
 		$values = array();
 
 		foreach ($this as $i => $item) {
-			$values[] = $map($i, $item);
+			$values[] = $map($i, $item, $this);
 		}
 
 		return $values;
@@ -156,8 +156,8 @@ class ElementList extends ArrayIterator
 	 */
 	public function remove()
 	{
-		$this->each(function($i, $item) {
-			unset($this[$i]);
+		$this->each(function($i, $item, $list) {
+			unset($list[$i]);
 			return $item->remove();
 		});
 
