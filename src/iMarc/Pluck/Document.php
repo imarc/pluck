@@ -27,14 +27,14 @@ class Document extends DOMDocument
 		$node_class = !isset($node_class)
 			? __NAMESPACE__ . '\Element'
 			: $node_class;
-
+		
+		// register custom node class
 		$this->registerNodeClass('DOMElement', $node_class);
 
 		libxml_use_internal_errors($quiet);
 		$this->loadHTML($src);
 		libxml_clear_errors();
 
-		// register custom node class
 		$this->xpath = new DOMXpath($this);
 	}
 
