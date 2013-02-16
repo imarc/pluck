@@ -5,8 +5,8 @@ namespace iMarc\Pluck;
 /**
  * The Expression class is responsible for CSS to XPath Translations
  *
- * @copyright (c) Copyright 2013 iMarc LLC <info@imarc.net>
- * @license MIT - For full information please view the LICENSE file distributed with this source
+ * @copyright © Copyright 2013 iMarc LLC <info@imarc.net>
+ * @license Licensed under MIT - Please view the LICENSE file distributed with this source
  *
  * @author TJ Holowaychuk <tj@vision-media.ca>
  * @author Jeff Turcotte <jeff@imarc.net>
@@ -14,7 +14,16 @@ namespace iMarc\Pluck;
  *
  * @todo write docs
  */
-class Expression {
+class Expression
+{
+	/**
+	 * Translates a CSS3 style selector to an XPath style selector
+	 *
+	 * @static
+	 * @access public
+	 * @param string $selector The selector to translate
+	 * @return string The translated selector
+	 */
 	static public function build($selector) {
 		$selector = 'descendant-or-self::' . $selector;
 		// ,

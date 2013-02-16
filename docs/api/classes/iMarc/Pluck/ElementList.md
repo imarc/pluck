@@ -1,12 +1,12 @@
 # ElementList
 ## The ElementList class is a container for many elements.
 
-_(c) Copyright 2013 iMarc LLC <info@imarc.net>_.
-_MIT - For full information please view the LICENSE file distributed with this source_
+_© Copyright 2013 iMarc LLC <info@imarc.net>_.
+_Licensed under MIT - Please view the LICENSE file distributed with this source_
 
 ### Extends
 
-`ArrayIterator`
+[`ArrayIterator`](http://www.php.net/class.arrayiterator.php)
 
 #### Namespace
 
@@ -100,7 +100,8 @@ Creates a new Element List
 				$list
 			</td>
 			<td>
-									DOMNodeList				
+									<a href="http://www.php.net/class.domnodelist.php">DOMNodeList</a>
+				
 			</td>
 			<td>
 				The DOMNodeList to mimic
@@ -490,7 +491,7 @@ Iterates over the existing elements of a list using a map function
 
 ### Inherited Methods
 
-[`ArrayIterator::offsetExists()`](#offsetExists) [`ArrayIterator::offsetGet()`](#offsetGet) [`ArrayIterator::offsetSet()`](#offsetSet) [`ArrayIterator::offsetUnset()`](#offsetUnset) [`ArrayIterator::append()`](#append) [`ArrayIterator::getArrayCopy()`](#getArrayCopy) [`ArrayIterator::count()`](#count) [`ArrayIterator::getFlags()`](#getFlags) [`ArrayIterator::setFlags()`](#setFlags) [`ArrayIterator::asort()`](#asort) [`ArrayIterator::ksort()`](#ksort) [`ArrayIterator::uasort()`](#uasort) [`ArrayIterator::uksort()`](#uksort) [`ArrayIterator::natsort()`](#natsort) [`ArrayIterator::natcasesort()`](#natcasesort) [`ArrayIterator::unserialize()`](#unserialize) [`ArrayIterator::serialize()`](#serialize) [`ArrayIterator::rewind()`](#rewind) [`ArrayIterator::current()`](#current) [`ArrayIterator::key()`](#key) [`ArrayIterator::next()`](#next) [`ArrayIterator::valid()`](#valid) [`ArrayIterator::seek()`](#seek) 
+[`ArrayIterator::offsetExists()`](http://www.php.net/class.arrayiterator.php#offsetExists) [`ArrayIterator::offsetGet()`](http://www.php.net/class.arrayiterator.php#offsetGet) [`ArrayIterator::offsetSet()`](http://www.php.net/class.arrayiterator.php#offsetSet) [`ArrayIterator::offsetUnset()`](http://www.php.net/class.arrayiterator.php#offsetUnset) [`ArrayIterator::append()`](http://www.php.net/class.arrayiterator.php#append) [`ArrayIterator::getArrayCopy()`](http://www.php.net/class.arrayiterator.php#getArrayCopy) [`ArrayIterator::count()`](http://www.php.net/class.arrayiterator.php#count) [`ArrayIterator::getFlags()`](http://www.php.net/class.arrayiterator.php#getFlags) [`ArrayIterator::setFlags()`](http://www.php.net/class.arrayiterator.php#setFlags) [`ArrayIterator::asort()`](http://www.php.net/class.arrayiterator.php#asort) [`ArrayIterator::ksort()`](http://www.php.net/class.arrayiterator.php#ksort) [`ArrayIterator::uasort()`](http://www.php.net/class.arrayiterator.php#uasort) [`ArrayIterator::uksort()`](http://www.php.net/class.arrayiterator.php#uksort) [`ArrayIterator::natsort()`](http://www.php.net/class.arrayiterator.php#natsort) [`ArrayIterator::natcasesort()`](http://www.php.net/class.arrayiterator.php#natcasesort) [`ArrayIterator::unserialize()`](http://www.php.net/class.arrayiterator.php#unserialize) [`ArrayIterator::serialize()`](http://www.php.net/class.arrayiterator.php#serialize) [`ArrayIterator::rewind()`](http://www.php.net/class.arrayiterator.php#rewind) [`ArrayIterator::current()`](http://www.php.net/class.arrayiterator.php#current) [`ArrayIterator::key()`](http://www.php.net/class.arrayiterator.php#key) [`ArrayIterator::next()`](http://www.php.net/class.arrayiterator.php#next) [`ArrayIterator::valid()`](http://www.php.net/class.arrayiterator.php#valid) [`ArrayIterator::seek()`](http://www.php.net/class.arrayiterator.php#seek) 
 
 
 

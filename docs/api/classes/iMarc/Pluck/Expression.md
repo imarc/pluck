@@ -1,8 +1,8 @@
 # Expression
 ## The Expression class is responsible for CSS to XPath Translations
 
-_(c) Copyright 2013 iMarc LLC <info@imarc.net>_.
-_MIT - For full information please view the LICENSE file distributed with this source_
+_© Copyright 2013 iMarc LLC <info@imarc.net>_.
+_Licensed under MIT - Please view the LICENSE file distributed with this source_
 
 #### Namespace
 
@@ -63,6 +63,47 @@ _MIT - For full information please view the LICENSE file distributed with this s
 <hr />
 
 #### <span style="color:#3e6a6e;">build()</span>
+
+Translates a CSS3 style selector to an XPath style selector
+
+###### Parameters
+
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type(s)</th>
+		<th>Description</th>
+	</thead>
+	<tbody>
+			
+		<tr>
+			<td>
+				$selector
+			</td>
+			<td>
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
+			</td>
+			<td>
+				The selector to translate
+			</td>
+		</tr>
+			
+	</tbody>
+</table>
+
+###### Returns
+
+<dl>
+	
+		<dt>
+			string
+		</dt>
+		<dd>
+			The translated selector
+		</dd>
+	
+</dl>
 
 
 

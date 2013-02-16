@@ -23,7 +23,6 @@ $dom->find('a.button')->remove();
 
 - Finish Documentation
 - Write Tests
-- Add Composer package json
 
 # Credits
 

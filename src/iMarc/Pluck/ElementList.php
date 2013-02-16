@@ -9,8 +9,8 @@ use ArrayIterator;
 /**
  * The ElementList class is a container for many elements.
  *
- * @copyright (c) Copyright 2013 iMarc LLC <info@imarc.net>
- * @license MIT - For full information please view the LICENSE file distributed with this source
+ * @copyright © Copyright 2013 iMarc LLC <info@imarc.net>
+ * @license Licensed under MIT - Please view the LICENSE file distributed with this source
  *
  * @author Jeff Turcotte <jeff@imarc.net>
  * @author Matthew J. Sahagian [mjs] <matt@imarc.net>
@@ -207,8 +207,5 @@ class ElementList extends ArrayIterator
 
 		return $list;
 	}
-
-
-
 }
 

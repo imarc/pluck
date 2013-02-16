@@ -4,12 +4,13 @@ namespace iMarc\Pluck;
 
 use DOMXpath;
 use DOMDocument;
+use DOMNode;
 
 /**
  * The ElementList class is a container for many elements.
  *
- * @copyright (c) Copyright 2013 iMarc LLC <info@imarc.net>
- * @license MIT - For full information please view the LICENSE file distributed with this source
+ * @copyright © Copyright 2013 iMarc LLC <info@imarc.net>
+ * @license Licensed under MIT - Please view the LICENSE file distributed with this source
  *
  * @author Jeff Turcotte <jeff@imarc.net>
  * @author Matthew J. Sahagian [mjs] <matt@imarc.net>
@@ -18,8 +19,27 @@ use DOMDocument;
  */
 class Document extends DOMDocument
 {
+	/**
+	 * The xpath object stored for querying
+	 *
+	 * @access protected
+	 * @var DOMXPath
+	 */
 	protected $xpath;
 
+
+	/**
+	 * Overload the normal DOMDocument constructor.
+	 *
+	 * We are mostly interested in overloading so that we can control parse errors, but also to
+	 * ensure each instance is using our custom element.
+	 *
+	 * @access public
+	 * @param string $src The HTML code which we will parse into DOM objects
+	 * @param boolean $quiet Whether or not we should keep quiet about parsing errors
+	 * @param string $node_class An override for the node class, defaults to Element
+	 * @return void
+	 */
 	public function __construct($src, $quiet = TRUE, $node_class = NULL)
 	{
 		parent::__construct();
@@ -27,7 +47,7 @@ class Document extends DOMDocument
 		$node_class = !isset($node_class)
 			? __NAMESPACE__ . '\Element'
 			: $node_class;
-		
+
 		// register custom node class
 		$this->registerNodeClass('DOMElement', $node_class);
 
@@ -38,7 +58,16 @@ class Document extends DOMDocument
 		$this->xpath = new DOMXpath($this);
 	}
 
-	public function find($selector, $context=NULL)
+
+	/**
+	 * Find elements using a CSS3 selector
+	 *
+	 * @access public
+	 * @param string $selector The CSS3 selector with which to find elements
+	 * @param DOMElement $context A starting element context (find matching children only)
+	 * @return ElementList A list of all matching elements
+	 */
+	public function find($selector, DOMElement $context=NULL)
 	{
 		$node_list = $context
 			? $this->xpath->query(Expression::build($selector), $context)
