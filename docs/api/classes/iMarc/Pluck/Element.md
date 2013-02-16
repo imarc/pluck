@@ -1,4 +1,4 @@
-# `Element`
+# Element
 ## The Element is our extended DOMElement class
 
 _(c) Copyright 2013 iMarc LLC <info@imarc.net>_.
@@ -6,7 +6,29 @@ _MIT - For full information please view the LICENSE file distributed with this s
 
 ### Extends
 
-`\DOMElement`#### Authors
+`DOMElement`
+
+#### Namespace
+
+`iMarc\Pluck`
+
+#### Imports
+
+<table>
+
+	<tr>
+		<th>Alias</th>
+		<th>Namespace / Class</th>
+	</tr>
+	
+	<tr>
+		<td>DOMElement</td>
+		<td>DOMElement</td>
+	</tr>
+	
+</table>
+
+#### Authors
 
 <table>
 	<thead>
@@ -15,7 +37,8 @@ _MIT - For full information please view the LICENSE file distributed with this s
 		<th>Email</th>
 	</thead>
 	<tbody>
-			<tr>
+	
+		<tr>
 			<td>
 				Jeff Turcotte
 			</td>
@@ -26,7 +49,8 @@ _MIT - For full information please view the LICENSE file distributed with this s
 				jeff@imarc.net
 			</td>
 		</tr>
-			<tr>
+	
+		<tr>
 			<td>
 				Matthew J. Sahagian
 			</td>
@@ -43,7 +67,6 @@ _MIT - For full information please view the LICENSE file distributed with this s
 
 
 ## Methods
-
 
 ### Instance Methods
 <hr />
@@ -67,7 +90,8 @@ Get or set an attribute on the element
 				$name
 			</td>
 			<td>
-				string
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
 			</td>
 			<td>
 				The name of the attribute
@@ -79,7 +103,8 @@ Get or set an attribute on the element
 				$name
 			</td>
 			<td>
-				string
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
 			</td>
 			<td>
 				The name of the attribute
@@ -91,7 +116,8 @@ Get or set an attribute on the element
 				$value
 			</td>
 			<td>
-				mixed
+									<a href="http://www.php.net/language.pseudo-types.php">mixed</a>
+				
 			</td>
 			<td>
 				The value to assign to the attribute (will be casted as a string)
@@ -135,7 +161,8 @@ Find children of this element matching a CSS selector
 				$selector
 			</td>
 			<td>
-				string
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
 			</td>
 			<td>
 				A CSS selector for matching elements
@@ -195,6 +222,12 @@ Remove the element from the DOM
 		</dd>
 	
 </dl>
+
+
+
+### Inherited Methods
+
+[`DOMElement::getAttribute()`](#getAttribute) [`DOMElement::setAttribute()`](#setAttribute) [`DOMElement::removeAttribute()`](#removeAttribute) [`DOMElement::getAttributeNode()`](#getAttributeNode) [`DOMElement::setAttributeNode()`](#setAttributeNode) [`DOMElement::removeAttributeNode()`](#removeAttributeNode) [`DOMElement::getElementsByTagName()`](#getElementsByTagName) [`DOMElement::getAttributeNS()`](#getAttributeNS) [`DOMElement::setAttributeNS()`](#setAttributeNS) [`DOMElement::removeAttributeNS()`](#removeAttributeNS) [`DOMElement::getAttributeNodeNS()`](#getAttributeNodeNS) [`DOMElement::setAttributeNodeNS()`](#setAttributeNodeNS) [`DOMElement::getElementsByTagNameNS()`](#getElementsByTagNameNS) [`DOMElement::hasAttribute()`](#hasAttribute) [`DOMElement::hasAttributeNS()`](#hasAttributeNS) [`DOMElement::setIdAttribute()`](#setIdAttribute) [`DOMElement::setIdAttributeNS()`](#setIdAttributeNS) [`DOMElement::setIdAttributeNode()`](#setIdAttributeNode) [`DOMElement::__construct()`](#__construct) [`\DOMNode::insertBefore()`](#insertBefore) [`\DOMNode::replaceChild()`](#replaceChild) [`\DOMNode::removeChild()`](#removeChild) [`\DOMNode::appendChild()`](#appendChild) [`\DOMNode::hasChildNodes()`](#hasChildNodes) [`\DOMNode::cloneNode()`](#cloneNode) [`\DOMNode::normalize()`](#normalize) [`\DOMNode::isSupported()`](#isSupported) [`\DOMNode::hasAttributes()`](#hasAttributes) [`\DOMNode::compareDocumentPosition()`](#compareDocumentPosition) [`\DOMNode::isSameNode()`](#isSameNode) [`\DOMNode::lookupPrefix()`](#lookupPrefix) [`\DOMNode::isDefaultNamespace()`](#isDefaultNamespace) [`\DOMNode::lookupNamespaceUri()`](#lookupNamespaceUri) [`\DOMNode::isEqualNode()`](#isEqualNode) [`\DOMNode::getFeature()`](#getFeature) [`\DOMNode::setUserData()`](#setUserData) [`\DOMNode::getUserData()`](#getUserData) [`\DOMNode::getNodePath()`](#getNodePath) [`\DOMNode::getLineNo()`](#getLineNo) [`\DOMNode::C14N()`](#C14N) [`\DOMNode::C14NFile()`](#C14NFile) 
 
 
 

@@ -1,4 +1,4 @@
-# `ElementList`
+# ElementList
 ## The ElementList class is a container for many elements.
 
 _(c) Copyright 2013 iMarc LLC <info@imarc.net>_.
@@ -6,7 +6,39 @@ _MIT - For full information please view the LICENSE file distributed with this s
 
 ### Extends
 
-`\ArrayIterator`#### Authors
+`ArrayIterator`
+
+#### Namespace
+
+`iMarc\Pluck`
+
+#### Imports
+
+<table>
+
+	<tr>
+		<th>Alias</th>
+		<th>Namespace / Class</th>
+	</tr>
+	
+	<tr>
+		<td>DOMNodeList</td>
+		<td>DOMNodeList</td>
+	</tr>
+	
+	<tr>
+		<td>Closure</td>
+		<td>Closure</td>
+	</tr>
+	
+	<tr>
+		<td>ArrayIterator</td>
+		<td>ArrayIterator</td>
+	</tr>
+	
+</table>
+
+#### Authors
 
 <table>
 	<thead>
@@ -15,7 +47,8 @@ _MIT - For full information please view the LICENSE file distributed with this s
 		<th>Email</th>
 	</thead>
 	<tbody>
-			<tr>
+	
+		<tr>
 			<td>
 				Jeff Turcotte
 			</td>
@@ -26,7 +59,8 @@ _MIT - For full information please view the LICENSE file distributed with this s
 				jeff@imarc.net
 			</td>
 		</tr>
-			<tr>
+	
+		<tr>
 			<td>
 				Matthew J. Sahagian
 			</td>
@@ -43,7 +77,6 @@ _MIT - For full information please view the LICENSE file distributed with this s
 
 
 ## Methods
-
 
 ### Instance Methods
 <hr />
@@ -67,7 +100,7 @@ Creates a new Element List
 				$list
 			</td>
 			<td>
-				DOMNodeList
+									DOMNodeList				
 			</td>
 			<td>
 				The DOMNodeList to mimic
@@ -111,7 +144,8 @@ Gets or sets an attribute
 				$name
 			</td>
 			<td>
-				string
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
 			</td>
 			<td>
 				The name of the attribute
@@ -123,7 +157,8 @@ Gets or sets an attribute
 				$value
 			</td>
 			<td>
-				mixed
+									<a href="http://www.php.net/language.pseudo-types.php">mixed</a>
+				
 			</td>
 			<td>
 				The value to assign to the attribute (will be casted as a string)
@@ -167,7 +202,7 @@ Iterate over the internal list of elements
 				$map
 			</td>
 			<td>
-				Closure
+									Closure				
 			</td>
 			<td>
 				The closure to iterate over the Elements with
@@ -211,7 +246,8 @@ Merges the elements of another ElementList onto this one
 				$list
 			</td>
 			<td>
-				ElementList
+									<a href="./">ElementList</a>
+				
 			</td>
 			<td>
 				The ElementList to merge
@@ -255,7 +291,8 @@ Find selector matching children of all elements in this list
 				$selector
 			</td>
 			<td>
-				string
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
 			</td>
 			<td>
 				The selector to match against
@@ -299,7 +336,8 @@ Gets the element in the list at a provided index
 				$index
 			</td>
 			<td>
-				int
+									<a href="http://www.php.net/language.types.integer.php">int</a>
+				
 			</td>
 			<td>
 				The index position with which to get an element from
@@ -381,7 +419,7 @@ Agregates the return values of a map into an array
 				$map
 			</td>
 			<td>
-				Closure
+									Closure				
 			</td>
 			<td>
 				The closure we map to
@@ -425,7 +463,7 @@ Iterates over the existing elements of a list using a map function
 				$map
 			</td>
 			<td>
-				Closure
+									Closure				
 			</td>
 			<td>
 				The closure we map to
@@ -447,6 +485,12 @@ Iterates over the existing elements of a list using a map function
 		</dd>
 	
 </dl>
+
+
+
+### Inherited Methods
+
+[`ArrayIterator::offsetExists()`](#offsetExists) [`ArrayIterator::offsetGet()`](#offsetGet) [`ArrayIterator::offsetSet()`](#offsetSet) [`ArrayIterator::offsetUnset()`](#offsetUnset) [`ArrayIterator::append()`](#append) [`ArrayIterator::getArrayCopy()`](#getArrayCopy) [`ArrayIterator::count()`](#count) [`ArrayIterator::getFlags()`](#getFlags) [`ArrayIterator::setFlags()`](#setFlags) [`ArrayIterator::asort()`](#asort) [`ArrayIterator::ksort()`](#ksort) [`ArrayIterator::uasort()`](#uasort) [`ArrayIterator::uksort()`](#uksort) [`ArrayIterator::natsort()`](#natsort) [`ArrayIterator::natcasesort()`](#natcasesort) [`ArrayIterator::unserialize()`](#unserialize) [`ArrayIterator::serialize()`](#serialize) [`ArrayIterator::rewind()`](#rewind) [`ArrayIterator::current()`](#current) [`ArrayIterator::key()`](#key) [`ArrayIterator::next()`](#next) [`ArrayIterator::valid()`](#valid) [`ArrayIterator::seek()`](#seek) 
 
 
 

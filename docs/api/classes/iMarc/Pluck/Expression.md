@@ -1,8 +1,13 @@
-# `Expression`
+# Expression
 ## The Expression class is responsible for CSS to XPath Translations
 
 _(c) Copyright 2013 iMarc LLC <info@imarc.net>_.
 _MIT - For full information please view the LICENSE file distributed with this source_
+
+#### Namespace
+
+`iMarc\Pluck`
+
 #### Authors
 
 <table>
@@ -12,7 +17,20 @@ _MIT - For full information please view the LICENSE file distributed with this s
 		<th>Email</th>
 	</thead>
 	<tbody>
-			<tr>
+	
+		<tr>
+			<td>
+				TJ Holowaychuk
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				tj@vision-media.ca
+			</td>
+		</tr>
+	
+		<tr>
 			<td>
 				Jeff Turcotte
 			</td>
@@ -23,7 +41,8 @@ _MIT - For full information please view the LICENSE file distributed with this s
 				jeff@imarc.net
 			</td>
 		</tr>
-			<tr>
+	
+		<tr>
 			<td>
 				Matthew J. Sahagian
 			</td>
@@ -40,11 +59,12 @@ _MIT - For full information please view the LICENSE file distributed with this s
 
 
 ## Methods
-
 ### Static Methods
 <hr />
 
 #### <span style="color:#3e6a6e;">build()</span>
+
+
 
 
 
