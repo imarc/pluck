@@ -32,6 +32,11 @@ _Licensed under MIT - Please view the LICENSE file distributed with this source_
 	</tr>
 	
 	<tr>
+		<td>DOMElement</td>
+		<td>DOMElement</td>
+	</tr>
+	
+	<tr>
 		<td>DOMNode</td>
 		<td>DOMNode</td>
 	</tr>
@@ -164,6 +169,7 @@ ensure each instance is using our custom element.
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">find()</span>
@@ -198,7 +204,8 @@ Find elements using a CSS3 selector
 				$context
 			</td>
 			<td>
-									DOMElement				
+									<a href="http://www.php.net/class.domelement.php">DOMElement</a>
+				
 			</td>
 			<td>
 				A starting element context (find matching children only)
@@ -220,6 +227,7 @@ Find elements using a CSS3 selector
 		</dd>
 	
 </dl>
+
 
 
 

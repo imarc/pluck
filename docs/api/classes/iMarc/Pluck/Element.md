@@ -140,6 +140,7 @@ Get or set an attribute on the element
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">find()</span>
@@ -185,6 +186,7 @@ Find children of this element matching a CSS selector
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">text()</span>
@@ -204,6 +206,7 @@ Get the text content value of this element
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">remove()</span>
@@ -222,6 +225,7 @@ Remove the element from the DOM
 		</dd>
 	
 </dl>
+
 
 
 

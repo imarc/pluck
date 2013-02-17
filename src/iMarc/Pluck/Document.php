@@ -4,6 +4,7 @@ namespace iMarc\Pluck;
 
 use DOMXpath;
 use DOMDocument;
+use DOMElement;
 use DOMNode;
 
 /**

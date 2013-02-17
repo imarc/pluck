@@ -67,6 +67,8 @@ class ElementList extends ArrayIterator
 	/**
 	 * Iterate over the internal list of elements
 	 *
+	 * @example element_list/each_basic.php
+	 *
 	 * @access public
 	 * @param Closure $map The closure to iterate over the Elements with
 	 * @return ElementList The object for method chaining

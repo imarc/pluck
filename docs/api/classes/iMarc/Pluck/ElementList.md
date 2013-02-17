@@ -124,6 +124,7 @@ Creates a new Element List
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">attr()</span>
@@ -182,6 +183,7 @@ Gets or sets an attribute
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">each()</span>
@@ -226,7 +228,21 @@ Iterate over the internal list of elements
 	
 </dl>
 
-<hr />
+
+###### Examples
+
+```
+<?php
+
+$element_list->each(function($i, $element) {
+	printf(
+		'The element at %d has an id of "%s"',
+		$i, $element->attr('id')
+	);
+});
+```
+
+			<hr />
 
 #### <span style="color:#3e6a6e;">merge()</span>
 
@@ -270,6 +286,7 @@ Merges the elements of another ElementList onto this one
 		</dd>
 	
 </dl>
+
 
 <hr />
 
@@ -316,6 +333,7 @@ Find selector matching children of all elements in this list
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">get()</span>
@@ -361,6 +379,7 @@ Gets the element in the list at a provided index
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">text()</span>
@@ -380,6 +399,7 @@ Get the inner text of all elements in the list
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">remove()</span>
@@ -398,6 +418,7 @@ Remove all elements in the list from the DOM
 		</dd>
 	
 </dl>
+
 
 <hr />
 
@@ -443,6 +464,7 @@ Agregates the return values of a map into an array
 	
 </dl>
 
+
 <hr />
 
 #### <span style="color:#3e6a6e;">iterateNew()</span>
@@ -486,6 +508,7 @@ Iterates over the existing elements of a list using a map function
 		</dd>
 	
 </dl>
+
 
 
 
