@@ -158,10 +158,15 @@ class ElementList extends ArrayIterator
 	 */
 	public function remove()
 	{
-		$this->each(function($i, $item, $list) {
-			unset($list[$i]);
+		$removed_items = array();
+
+		$this->each(function($i, $item) use ($removed_items){
 			return $item->remove();
 		});
+
+		foreach ($removed_items as $i) {
+			unset($this[$i]);
+		}
 
 		return $this;
 	}
