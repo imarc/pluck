@@ -22,5 +22,10 @@
 		"psr-0": {
 			"iMarc\\Pluck": "src/"
 		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
 	}
 }
