@@ -79,5 +79,20 @@ class Element extends DOMElement
 
 		return $this;
 	}
+
+	/**
+	 * Replace an element in the DOM
+	 *
+	 * @access public
+	 * @return Element the element for method chaining
+	 */
+	public function replace(DOMElement $node)
+	{
+		$parent = $this->parentNode;
+		$this->remove();
+		$parent->appendChild($node);
+
+		return $this;
+	}
 }
 
