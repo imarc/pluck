@@ -84,7 +84,7 @@ class Document extends DOMDocument
 	 */
 	public function find($selector, DOMElement $context=NULL)
 	{
-		return new $this->query(Expression::build($selector), $context);
+		return $this->query(Expression::build($selector), $context);
 	}
 
 
