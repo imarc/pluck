@@ -6,6 +6,7 @@ use DOMXpath;
 use DOMDocument;
 use DOMElement;
 use DOMNode;
+use Symfony\Component\CssSelector\CssSelector;
 
 /**
  * The ElementList class is a container for many elements.
@@ -91,7 +92,7 @@ class Document extends DOMDocument
 	 */
 	public function find($selector, DOMElement $context=NULL)
 	{
-		return $this->query(Expression::build($selector), $context);
+		return $this->query(CssSelector::toXPath($selector), $context);
 	}
 
 

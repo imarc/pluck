@@ -227,6 +227,26 @@ Remove the element from the DOM
 </dl>
 
 
+<hr />
+
+#### <span style="color:#3e6a6e;">replace()</span>
+
+Replace an element in the DOM
+
+###### Returns
+
+<dl>
+	
+		<dt>
+			Element
+		</dt>
+		<dd>
+			the element for method chaining
+		</dd>
+	
+</dl>
+
+
 
 
 ### Inherited Methods

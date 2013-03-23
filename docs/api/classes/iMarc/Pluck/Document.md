@@ -41,6 +41,11 @@ _Licensed under MIT - Please view the LICENSE file distributed with this source_
 		<td>DOMNode</td>
 	</tr>
 	
+	<tr>
+		<td>CssSelector</td>
+		<td>Symfony\Component\CssSelector\CssSelector</td>
+	</tr>
+	
 </table>
 
 #### Authors
@@ -86,6 +91,10 @@ _Licensed under MIT - Please view the LICENSE file distributed with this source_
 #### <span style="color:#6a6e3d;">$xpath</span>
 
 The xpath object stored for querying
+
+#### <span style="color:#6a6e3d;">$nodelist_class</span>
+
+The class to use for node list
 
 
 
@@ -152,6 +161,19 @@ ensure each instance is using our custom element.
 				An override for the node class, defaults to Element
 			</td>
 		</tr>
+					
+		<tr>
+			<td>
+				$nodelist_class
+			</td>
+			<td>
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
+			</td>
+			<td>
+				An override for the node list class, defaults to ElementList
+			</td>
+		</tr>
 			
 	</tbody>
 </table>
@@ -209,6 +231,65 @@ Find elements using a CSS3 selector
 			</td>
 			<td>
 				A starting element context (find matching children only)
+			</td>
+		</tr>
+			
+	</tbody>
+</table>
+
+###### Returns
+
+<dl>
+	
+		<dt>
+			ElementList
+		</dt>
+		<dd>
+			A list of all matching elements
+		</dd>
+	
+</dl>
+
+
+<hr />
+
+#### <span style="color:#3e6a6e;">query()</span>
+
+Find elements using an xpath expression
+
+###### Parameters
+
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Type(s)</th>
+		<th>Description</th>
+	</thead>
+	<tbody>
+			
+		<tr>
+			<td>
+				$query
+			</td>
+			<td>
+									<a href="http://www.php.net/language.types.string.php">string</a>
+				
+			</td>
+			<td>
+				The expression with which to find elements
+			</td>
+		</tr>
+					
+		<tr>
+			<td>
+				$context
+			</td>
+			<td>
+									<a href="http://www.php.net/class.domelement.php">DOMElement</a>
+				
+			</td>
+			<td>
+				A starting element context
 			</td>
 		</tr>
 			

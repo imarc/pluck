@@ -231,6 +231,7 @@ Iterate over the internal list of elements
 
 ###### Examples
 
+
 ```php
 <?php
 
@@ -242,8 +243,9 @@ $element_list->each(function($i, $element) {
 });
 
 ```
-
 			
+
+
 <hr />
 
 #### <span style="color:#3e6a6e;">merge()</span>
