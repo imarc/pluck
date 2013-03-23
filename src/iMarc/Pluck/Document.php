@@ -55,6 +55,10 @@ class Document extends DOMDocument
 	{
 		parent::__construct();
 
+		$src = !strlen(trim($src))
+			? '<!doctype html><html><head></head><body></body></html>'
+			: $src;
+
 		$node_class = !isset($node_class)
 			? __NAMESPACE__ . '\Element'
 			: $node_class;
@@ -63,7 +67,10 @@ class Document extends DOMDocument
 			? __NAMESPACE__ . '\ElementList'
 			: $nodelist_class;
 
+		//
 		// register custom node class
+		//
+
 		$this->registerNodeClass('DOMElement', $node_class);
 
 		libxml_use_internal_errors($quiet);
