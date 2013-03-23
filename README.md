@@ -2,6 +2,10 @@
 
 A DOM CSS selector engine
 
+# Installation
+
+Pluck uses Symfony's CSS-Selector for converting CSS selectors to XPath queries.  Please ensure you have this package available.  If you're using composer your standard `composer install` should fetch it as a requirement.
+
 # Usage
 
 ```php
@@ -26,5 +30,4 @@ $dom->find('a.button')->remove();
 
 # Credits
 
-- Many of the regexps for CSS to Xpath conversion were authored by T.J. Holowaychuck for his [php-selector](https://github.com/imarc/php-selector) library.
 - While this library does not try to mimic jQuery, it will surely always be inspired by it.
